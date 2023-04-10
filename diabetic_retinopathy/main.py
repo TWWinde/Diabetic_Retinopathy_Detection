@@ -6,11 +6,11 @@ import numpy as np
 from absl import app, flags
 import tensorflow as tf
 from Deep_visualization.Dimensionality_reduction import Dimensionality_Reduction
-from input_pipeline.TFrecord_writer import write_Tfrecord
-from input_pipeline.data_prepare import processing_augmentation_oversampling
+from Input_pipeline.TFrecord_writer import write_Tfrecord
+from Input_pipeline.data_prepare import processing_augmentation_oversampling
 from train import Trainer
 from evaluation.eval import evaluate, evaluate_fl
-from input_pipeline.datasets import load, get_dataset
+from Input_pipeline.datasets import load, get_dataset
 from utilss import utils_params, utils_misc
 from models.architectures import vgg_like
 from models_Resnet.architectures import resnet
