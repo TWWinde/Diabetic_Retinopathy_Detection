@@ -5,7 +5,7 @@ This repository contains the code for training and evaluation of Deep Learning L
 
 ## Links
 
-* [Lab Report](https://research.nvidia.com/publication/2019-10_Few-Shot-Adaptive-Gaze)
+* [Lab Report](https://github.com/TWWinde/Diabetic_Retinopathy/blob/main/Diabetic_Retinopathy_Detection_based_on_Deep_Learning.pdf)
   
 ## Train and Evaluation
 
