@@ -12,6 +12,7 @@ Pre-process the [*IDRID Dataset*](https://ieee-dataport.org/open-access/indian-d
 2. Run the script using `python data_prepare.py` to generate the needed TFrecord files.
    
        cd /Input_pipline
+   
        python data_prepare.py
    
 After the dataset preprocessing procedures have been performed, we can move on to the next steps.
