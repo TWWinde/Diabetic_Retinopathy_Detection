@@ -5,7 +5,7 @@ This repository contains the code for training and evaluation of Deep Learning L
 
 ## Train and Evaluation
 
-### Datasets
+### 1.Datasets
 
 Pre-process the [*IDRID Dataset*](https://ieee-dataport.org/open-access/indian-diabetic-retinopathy-image-dataset-idrid) using the code-base at `Input_pipeline/` (https://github.com/TWWinde/Diabetic_Retinopathy/tree/main/diabetic_retinopathy/Input_pipeline).
 # How to run the code
