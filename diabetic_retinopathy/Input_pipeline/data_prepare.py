@@ -101,3 +101,5 @@ def processing_augmentation_oversampling(lb_path, save_path, img_path, amount): 
             i += 1
             if i == 413:
                 i = 0
+
+processing_augmentation_oversampling()
