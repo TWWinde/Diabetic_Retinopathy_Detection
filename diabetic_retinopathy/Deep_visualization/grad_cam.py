@@ -49,7 +49,7 @@ def Grad_CAM(model, img_path, last_conv_layer_name):
         # last_conv_layer_output.shape  =(10, 10, 2048)
         last_conv_layer_output = last_conv_layer_output[0]
         heatmap = last_conv_layer_output @ pooled_grads[..., tf.newaxis]
-        # tf.squeeze 去除1的维度,(10, 10)
+        # tf.squeeze 
         heatmap = tf.squeeze(heatmap)
 
         # For visualization purpose, we will also normalize the heatmap between 0 & 1
