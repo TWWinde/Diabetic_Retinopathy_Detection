@@ -34,22 +34,11 @@ def setup_seed(seed):
     np.random.seed(seed)
     tf.random.set_seed(seed)
     os.environ['TF_DETERMINISTIC_OPS'] = '1'
-
-
 setup_seed(66)
-
-
-
-
 
 @gin.configurable
 def main(argv):
-
-
-    # change the number to decide the operation.
-    Choose = ['evaluate_fl', 'confusionmatrix', 'Dimensionality_Reduction', 'ROC']
-    test_flag = Choose[0]
-
+  
     # generate folder structures
     run_paths = utils_params.gen_run_folder()
 
@@ -59,8 +48,6 @@ def main(argv):
     # gin-config
     gin.parse_config_files_and_bindings(['configs/config.gin'], [])
     utils_params.save_config(run_paths['path_gin'], gin.config_str())
-
-   
 
     # setup pipeline
     ds_train, ds_val, ds_test, ds_info = load()
