@@ -22,7 +22,7 @@ parser = argparse.ArgumentParser(description='Train model')
 parser.add_argument('--model', choices=['vgg_like', 'resnet', 'tl_inception', 'tl_xception', 'tl_inception_resnet'], default = 'vgg_like'
                     help='choose model')
 parser.add_argument('--mode', choices=['train','test'], default = 'train', help='train or test')
-parser.add_argument('--evaluation', choices=['evaluate_fl', 'confusionmatrix', 'Dimensionality_Reduction', 'ROC'], default = 'evaluate_fl', help='train or test')
+parser.add_argument('--evaluation', choices=['evaluate_fl', 'confusionmatrix', 'Dimensionality_Reduction', 'ROC'], default = 'evaluate_fl', help='evaluation methods')
 parser.add_argument('--checkpoint-file', type=str, default='./ckpts/',
                     help='Path to checkpoint.')
 
