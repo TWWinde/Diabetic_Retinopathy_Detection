@@ -7,7 +7,7 @@ This repository contains the code for training and evaluation of Deep Learning L
 
 ### Datasets
 
-Pre-process the *IDRID* datasets using the code-base at (https://github.com/TWWinde/Diabetic_Retinopathy/tree/main/diabetic_retinopathy/Input_pipeline).
+Pre-process the *IDRID* datasets using the code-base at `Input_pipeline/` (https://github.com/TWWinde/Diabetic_Retinopathy/tree/main/diabetic_retinopathy/Input_pipeline).
 # How to run the code
 
 - Change  `batch.sh` to `python3 main.py` Run `main.py` to train or evaluation. Run `main.py` ,it will process the image and serialize images and labels into the TFRecord format and then training the model automatically.      
