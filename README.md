@@ -5,9 +5,22 @@ This repository contains the code for training and evaluation of Deep Learning L
 
 ## Train and Evaluation
 
-### 1.Datasets
+### 1. Datasets
 
 Pre-process the [*IDRID Dataset*](https://ieee-dataport.org/open-access/indian-diabetic-retinopathy-image-dataset-idrid) using the code-base at `Input_pipeline/` (https://github.com/TWWinde/Diabetic_Retinopathy/tree/main/diabetic_retinopathy/Input_pipeline).
+After the dataset preprocessing procedures have been performed, we can move on to the next steps.
+
+### 2. Prerequisites
+
+This codebase should run on most standard Linux systems. We specifically used Ubuntu 
+
+Please install the following prerequisites manually (as well as their dependencies), by following the instructions found below:
+* Tensorflow 
+
+The remaining Python package dependencies can be installed by running:
+
+       pip3 install --user --upgrade -r requirements.txt
+
 # How to run the code
 
 - Change  `batch.sh` to `python3 main.py` Run `main.py` to train or evaluation. Run `main.py` ,it will process the image and serialize images and labels into the TFRecord format and then training the model automatically.      
