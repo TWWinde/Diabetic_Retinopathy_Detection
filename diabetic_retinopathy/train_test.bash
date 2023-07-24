@@ -1,3 +1,5 @@
+#!/bin/bash
+
 CHECKPOINT_FILE="/projects/tang/fsg/preprocess/outputs/MPIIGaze.h5"
 
 CMD=""
