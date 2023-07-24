@@ -23,24 +23,21 @@ The remaining Python package dependencies can be installed by running:
 
        pip3 install --user --upgrade -r requirements.txt
 
+### 3. Training,Evalutions and Hyperparameter Optimization
 
-- Change  `batch.sh` to `python3 main.py` Run `main.py` to train or evaluation. Run `main.py` ,it will process the image and serialize images and labels into the TFRecord format and then training the model automatically.      
-- Change **FLAGS** in main.py to decide whether to train or test.  change **model_flag** to decide to train or evaluate which model. change **test_flag** to choose the method of evaluation, eg. evaluatatin, confusionmatrix, Dimensionality_Reduction, ROC.
-  ``` python
+Run the all-in-one example bash script with:
 
-  ```
-- Change  `batch.sh` to `python3 tune.py`. Run `tune.py` to do hyperparameter optimization. 
+    cd src/
+    bash train_test.bash
 
-
-
-### 3. Results of Diabetic retinopathy
+### 4. Results of Diabetic retinopathy
 - The results of image pre-processing (before and after). 
 ```python
 img = cv2.addWeighted(img, 4, cv2.GaussianBlur(img, (0, 0), 10), -4, 128)
 ```
 <img src="https://media.github.tik.uni-stuttgart.de/user/5018/files/89b9d1a1-ad95-42cb-b43d-7200d0daaf60" width="350px"> <img src="https://media.github.tik.uni-stuttgart.de/user/5018/files/d089052f-fa81-47c2-bd6d-a52404eb432e" width="230px">
 
-### Training results
+Training results
 | Model      |  Test Accuracy  | Total Params | AUC   |
 |:----------:|:-----------------: |:------------:|:------------:|
 | Basic-CNN  |      0.7282     |    397,986   | 0.82  |
