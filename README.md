@@ -3,6 +3,10 @@
 # Diabetic Retinopathy Detection
 This repository contains the code for training and evaluation of Deep Learning Lab work.
 
+## Links
+
+* [Lab Report](https://research.nvidia.com/publication/2019-10_Few-Shot-Adaptive-Gaze)
+  
 ## Train and Evaluation
 
 ### 1. Datasets
