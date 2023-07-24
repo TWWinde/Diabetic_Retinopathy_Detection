@@ -8,7 +8,7 @@ This repository contains the code for training and evaluation of Deep Learning L
 ### 1. Datasets
 
 Pre-process the [*IDRID Dataset*](https://ieee-dataport.org/open-access/indian-diabetic-retinopathy-image-dataset-idrid) using the code-base at `Input_pipeline/` (https://github.com/TWWinde/Diabetic_Retinopathy/tree/main/diabetic_retinopathy/Input_pipeline).
-1. Edit the paths defined at the bottom of the main script to point to the actual data paths. More information on where to acquire the original datasets are provided below.
+1. Edit the paths defined at the config script to point to the actual data paths. 
 2. Run the script using `python data_prepare.py` to generate the needed TFrecord files.
 After the dataset preprocessing procedures have been performed, we can move on to the next steps.
 
@@ -23,21 +23,17 @@ The remaining Python package dependencies can be installed by running:
 
        pip3 install --user --upgrade -r requirements.txt
 
-# How to run the code
 
 - Change  `batch.sh` to `python3 main.py` Run `main.py` to train or evaluation. Run `main.py` ,it will process the image and serialize images and labels into the TFRecord format and then training the model automatically.      
 - Change **FLAGS** in main.py to decide whether to train or test.  change **model_flag** to decide to train or evaluate which model. change **test_flag** to choose the method of evaluation, eg. evaluatatin, confusionmatrix, Dimensionality_Reduction, ROC.
   ``` python
-  Choose_model = ['vgg_like', 'resnet', 'tl_inception', 'tl_xception', 'tl_inception_resnet']
-  model_flag = Choose_model[0]
-  Choose = ['evaluate_fl', 'confusionmatrix', 'Dimensionality_Reduction', 'ROC']
-  test_flag = Choose[0]
+
   ```
 - Change  `batch.sh` to `python3 tune.py`. Run `tune.py` to do hyperparameter optimization. 
 
 
 
-## Results of Diabetic retinopathy
+### 3. Results of Diabetic retinopathy
 - The results of image pre-processing (before and after). 
 ```python
 img = cv2.addWeighted(img, 4, cv2.GaussianBlur(img, (0, 0), 10), -4, 128)
