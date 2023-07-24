@@ -31,7 +31,7 @@ The remaining Python package dependencies can be installed by running:
 
 Run the all-in-one example bash script with:
 
-    bash train_test.bash
+      bash train_test.bash
 
 ### 4. Results of Diabetic retinopathy
 - The results of image pre-processing (before and after). 
