@@ -57,8 +57,7 @@ tl_inception_resnet.dropout_rate=0.2
 #processing_augmentation_oversampling
 processing_augmentation_oversampling.lb_path='/home/data/IDRID_dataset/labels/'
 processing_augmentation_oversampling.img_path='/home/data/IDRID_dataset/images/'
-processing_augmentation_oversampling.save_path='/home/RUS_CIP/st180408/dl-lab-22w-team08/diabetic_retinopathy_2/'
+processing_augmentation_oversampling.save_path='./diabetic_retinopathy/'
 processing_augmentation_oversampling.amount= 2000
-write_Tfrecord.save_path='/home/RUS_CIP/st180408/dl-lab-22w-team08/diabetic_retinopathy_2/'
-load.save_path='D:/Master/DL LAB/train_space/final/'
-load.save_path='/home/RUS_CIP/st180408/dl-lab-22w-team08/diabetic_retinopathy_2/'
+write_Tfrecord.save_path='./diabetic_retinopathy/'
+load.save_path='./diabetic_retinopathy/'
