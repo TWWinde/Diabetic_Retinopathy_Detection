@@ -1,7 +1,13 @@
 
 
-# FAZE: Few-Shot Adaptive Gaze Estimation
+# Diabetic Retinopathy Detection
+This repository contains the code for training and evaluation of Deep Learning Lab work.
 
+## Train and Evaluation
+
+### Datasets
+
+Pre-process the *IDRID* datasets using the code-base at https://github.com/swook/faze_preprocess which is also available as a git submodule at the relative path, `preprocess/`.
 # How to run the code
 
 - Change  `batch.sh` to `python3 main.py` Run `main.py` to train or evaluation. Run `main.py` ,it will process the image and serialize images and labels into the TFRecord format and then training the model automatically.      
