@@ -6,27 +6,28 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
+def crop_image_from_gray(img, tol=7):
+    if img.ndim == 2:
+        mask = img > tol
+        return img[np.ix_(mask.any(1), mask.any(0))]
+    elif img.ndim == 3:
+        gray_img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
+        mask = gray_img > tol
+
+        check_shape = img[:, :, 0][np.ix_(mask.any(1), mask.any(0))].shape[0]
+        if (check_shape == 0):  # image is too dark so that we crop out everything,
+            return img  # return original image
+        else:
+            img1 = img[:, :, 0][np.ix_(mask.any(1), mask.any(0))]
+            img2 = img[:, :, 1][np.ix_(mask.any(1), mask.any(0))]
+            img3 = img[:, :, 2][np.ix_(mask.any(1), mask.any(0))]
+            #         print(img1.shape,img2.shape,img3.shape)
+            img = np.stack([img1, img2, img3], axis=-1)
+        #         print(img.shape)
+        return img
+
+
 def Ben_preprocess(image):
-    def crop_image_from_gray(img, tol=7):
-        if img.ndim == 2:
-            mask = img > tol
-            return img[np.ix_(mask.any(1), mask.any(0))]
-        elif img.ndim == 3:
-            gray_img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
-            mask = gray_img > tol
-
-            check_shape = img[:, :, 0][np.ix_(mask.any(1), mask.any(0))].shape[0]
-            if (check_shape == 0):  # image is too dark so that we crop out everything,
-                return img  # return original image
-            else:
-                img1 = img[:, :, 0][np.ix_(mask.any(1), mask.any(0))]
-                img2 = img[:, :, 1][np.ix_(mask.any(1), mask.any(0))]
-                img3 = img[:, :, 2][np.ix_(mask.any(1), mask.any(0))]
-                #         print(img1.shape,img2.shape,img3.shape)
-                img = np.stack([img1, img2, img3], axis=-1)
-            #         print(img.shape)
-            return img
-
     image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
     image = cv2.resize(image, (256, 256))
@@ -38,27 +39,6 @@ def Ben_preprocess(image):
 
 def Ben_preprocess_circle(img):
     img = np.array(img)
-
-    def crop_image_from_gray(img, tol=7):
-        if img.ndim == 2:
-            mask = img > tol
-            return img[np.ix_(mask.any(1), mask.any(0))]
-        elif img.ndim == 3:
-            gray_img = cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
-            mask = gray_img > tol
-
-            check_shape = img[:, :, 0][np.ix_(mask.any(1), mask.any(0))].shape[0]
-            if (check_shape == 0):  # image is too dark so that we crop out everything,
-                return img  # return original image
-            else:
-                img1 = img[:, :, 0][np.ix_(mask.any(1), mask.any(0))]
-                img2 = img[:, :, 1][np.ix_(mask.any(1), mask.any(0))]
-                img3 = img[:, :, 2][np.ix_(mask.any(1), mask.any(0))]
-                #         print(img1.shape,img2.shape,img3.shape)
-                img = np.stack([img1, img2, img3], axis=-1)
-            #         print(img.shape)
-            return img
-
     """
             Create circular crop around image centre
             """

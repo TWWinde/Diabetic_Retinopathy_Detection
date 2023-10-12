@@ -1,4 +1,6 @@
 import os
+import sys
+sys.path.append("./diabetic_retinopathy")
 import argparse
 import random
 import gin
@@ -19,7 +21,7 @@ from models.TL import tl_inception, tl_xception, tl_inception_resnet
 from evaluation.metrics import confusionmatrix, ROC
 
 parser = argparse.ArgumentParser(description='Train model')
-parser.add_argument('--model', choices=['vgg_like', 'resnet', 'tl_inception', 'tl_xception', 'tl_inception_resnet'], default = 'vgg_like'
+parser.add_argument('--model', choices=['vgg_like', 'resnet', 'tl_inception', 'tl_xception', 'tl_inception_resnet'], default = 'vgg_like',
                     help='choose model')
 parser.add_argument('--mode', choices=['train','test'], default = 'train', help='train or test')
 parser.add_argument('--evaluation', choices=['evaluate_fl', 'confusionmatrix', 'Dimensionality_Reduction', 'ROC'], default = 'evaluate_fl', help='evaluation methods')

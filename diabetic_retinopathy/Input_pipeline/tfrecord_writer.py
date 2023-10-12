@@ -1,4 +1,5 @@
 import gin
+import os
 import tensorflow as tf
 from numpy import *
 from input_pipeline.data_prepare import get_image_names_labels
@@ -13,7 +14,7 @@ def get_images(data_dir, image_name):
 # Use this function to serialize images and labels into the TFRecord format
 @gin.configurable
 def write_Tfrecord(save_path):
-    test_img_path = save_path + 'image/test/'
+    test_img_path = os.path.join(save_path, 'image', 'test')
     test_label_imagename = get_image_names_labels(save_path + 'test.csv')
     with tf.io.TFRecordWriter(save_path + 'test.tfrecords') as writer:
         for i in range((len(test_label_imagename))):
