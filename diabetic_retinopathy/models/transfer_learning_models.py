@@ -2,7 +2,9 @@ import gin
 import tensorflow as tf
 from keras import layers
 from keras import regularizers
-
+"""
+    apply pretrained models, which are trained on big datasets as feature extractor and add FC layers as classifier
+ """
 
 @gin.configurable
 def tl_inception(input_shape, n_classes, dense_units, dropout_rate):

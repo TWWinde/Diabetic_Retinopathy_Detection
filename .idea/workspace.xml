@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bded746a-ec03-4fe7-b13c-dd807ba6d250" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Diabetic_retinopathy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Diabetic_retinopathy.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diabetic_retinopathy/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/diabetic_retinopathy/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diabetic_retinopathy/models/architectures.py" beforeDir="false" afterPath="$PROJECT_DIR$/diabetic_retinopathy/models/architectures.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diabetic_retinopathy/models/layers.py" beforeDir="false" afterPath="$PROJECT_DIR$/diabetic_retinopathy/models/layers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diabetic_retinopathy/models/transfer_learning_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/diabetic_retinopathy/models/transfer_learning_models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diabetic_retinopathy/models_Resnet/architectures.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/diabetic_retinopathy/models_Resnet/layers.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +33,16 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/tangwenwu/Documents/GitHub/Diabetic_retinopathy",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -42,8 +53,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1681070937061</updated>
+      <workItem from="1697130662721" duration="1640000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

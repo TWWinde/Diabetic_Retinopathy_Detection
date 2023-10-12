@@ -14,7 +14,7 @@ from evaluation.eval import evaluate, evaluate_fl
 from Input_pipeline.datasets import load, get_dataset
 from utilss import utils_params, utils_misc
 from models.architectures import vgg_like
-from models_Resnet.architectures import resnet
+from models.architectures import resnet
 from models.TL import tl_inception, tl_xception, tl_inception_resnet
 from evaluation.metrics import confusionmatrix, ROC
 
@@ -76,7 +76,6 @@ def main(argv):
         manager = tf.train.CheckpointManager(checkpoint,
                                              directory=args.checkpoint_file,
                                              max_to_keep=3)
-
 
         checkpoint.restore(manager.latest_checkpoint)
         if manager.latest_checkpoint:
